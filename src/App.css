@@ -1,0 +1,106 @@
+:root {
+  --cream-color: #f9f6e5;
+  --grid-color: rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src: url('./assets/fonts/static/Unbounded-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src: url('./assets/fonts/static/Unbounded-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src: url('./assets/fonts/static/Unbounded-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src: url('./assets/fonts/static/Unbounded-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--cream-color);
+  margin: 0;
+  padding: 0;
+}
+
+.grid-bg {
+  background-color: var(--cream-color);
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.text-gradient {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 400;
+  line-height: 111%;
+  letter-spacing: 0px;
+  background: linear-gradient(90deg, #2D3BA1 0%, #5E5BA7 15.96%, #D5410E 51.23%, #84147F 74.47%, #790C11 91.99%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.glow-effect {
+  background: radial-gradient(circle, rgb(255, 200, 0) 0%, rgba(255, 255, 255, 0) 90%);
+  filter: blur(200px);
+  border-radius: 25%;
+  position: absolute;
+}
+
+.mobile-glow-effect {
+  background: radial-gradient(circle, rgb(255, 200, 0) 0%, rgba(255, 255, 255, 0) 90%);
+  filter: blur(200px);
+  border-radius: 25%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-bg {
+    background-size: 30px 30px;
+  }
+
+  .text-gradient {
+    font-size: 2.5rem;
+  }
+
+  header {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
