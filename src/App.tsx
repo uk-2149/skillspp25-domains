@@ -1,4 +1,3 @@
-import React from 'react'
 import Domain from './pages/Domain'
 import "./App.css"
 
